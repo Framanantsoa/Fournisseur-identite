@@ -1,27 +1,39 @@
-var builder = WebApplication.CreateBuilder(args);
+using App.Context;
+using App.Services;
+using Microsoft.EntityFrameworkCore;
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-builder.WebHost.UseUrls("http://0.0.0.0:5000");
+namespace App.Main;
 
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+public class Program
 {
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
+    public static void Main(string[] args) {
+        var builder = WebApplication.CreateBuilder(args);
+    // Les services
+        builder.Services.AddScoped<UserService>();
+    // Configuration de PostgreSQL
+        builder.Services.AddDbContext<MyDbContext>(opt =>
+            opt.UseNpgsql(
+                builder.Configuration.GetConnectionString("Default")
+            )
+        );
+    // Ajouter les contrôleurs
+        builder.Services.AddControllers();
+        builder.WebHost.UseUrls("http://0.0.0.0:5000");
+
+        var app = builder.Build();
+
+    // Configuration des middlewares
+        if (!app.Environment.IsDevelopment())
+        {
+            app.UseHsts();
+        }
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+        app.UseRouting();
+        app.UseAuthorization();
+        app.MapControllers();
+
+        app.Run();
+    }
 }
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
-app.Run();
