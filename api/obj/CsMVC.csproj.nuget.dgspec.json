@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/fra/ITU/s5/proj/Cs/CsMVC/CsMVC.csproj": {}
+    "/app/CsMVC.csproj": {}
   },
   "projects": {
-    "/home/fra/ITU/s5/proj/Cs/CsMVC/CsMVC.csproj": {
+    "/app/CsMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/fra/ITU/s5/proj/Cs/CsMVC/CsMVC.csproj",
+        "projectUniqueName": "/app/CsMVC.csproj",
         "projectName": "CsMVC",
-        "projectPath": "/home/fra/ITU/s5/proj/Cs/CsMVC/CsMVC.csproj",
-        "packagesPath": "/home/fra/.nuget/packages/",
-        "outputPath": "/home/fra/ITU/s5/proj/Cs/CsMVC/obj/",
+        "projectPath": "/app/CsMVC.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/app/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/fra/.nuget/NuGet/NuGet.Config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,26 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -56,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

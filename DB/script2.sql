@@ -1,3 +1,5 @@
+-- Schemas
+
 CREATE TABLE roles(
    role_id SERIAL,
    role_type VARCHAR(50)  NOT NULL,
