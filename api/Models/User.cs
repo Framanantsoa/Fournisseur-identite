@@ -11,14 +11,14 @@ public class User
     public int id {get; set;}
 
     [Column("user_name")]
-    public string? name {get; set;}
+    public string name {get; set;}
 
     [Column("user_email")]
-    public string? email {get; set;}
+    public string email {get; set;}
 
     [Column("user_password")]
-    public string? password {get; set;}
+    public string password {get; set;}
 
     [Column("user_token")]
-    public string? token {get; set;}
+    public string token {get; set;}
 }

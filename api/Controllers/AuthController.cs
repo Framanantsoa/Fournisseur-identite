@@ -6,11 +6,11 @@ namespace App.Controllers;
 
 [ApiController]
 [Route("api")]
-public class UserController : Controller
+public class AuthController : Controller
 {
     private readonly UserService service;
 
-    public UserController(UserService sv) {
+    public AuthController(UserService sv) {
         this.service = sv;
     }
 

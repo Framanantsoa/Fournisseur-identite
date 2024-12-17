@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4ztj53iWHfpHfHjDE+ipe2kBPhZtHzppQX/K9DB7mVAPwp1Q4UmTGoLZwxVnOiInEc3SXNds62gBI5q+itlibw==",
+  "dgSpecHash": "+RqEujFVi8qh9l7nfdQMv8KcjSFpOg1wZsYQb74gbBgr5/mhyYRR9BkAmuEoDAxhaljJbSG4H8mbqnBHeBRDRg==",
   "success": true,
   "projectFilePath": "/home/fra/ITU/s5/inf306-Cd/IdProvider/api/api.csproj",
   "expectedPackageFiles": [
+    "/home/fra/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/home/fra/.nuget/packages/microsoft.entityframeworkcore/9.0.0/microsoft.entityframeworkcore.9.0.0.nupkg.sha512",
     "/home/fra/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.0/microsoft.entityframeworkcore.abstractions.9.0.0.nupkg.sha512",
     "/home/fra/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.0/microsoft.entityframeworkcore.analyzers.9.0.0.nupkg.sha512",
