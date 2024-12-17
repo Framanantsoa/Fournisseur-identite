@@ -1,9 +1,3 @@
-CREATE TABLE roles(
-   role_id SERIAL,
-   role_type VARCHAR(50)  NOT NULL,
-   PRIMARY KEY(role_id)
-);
-
 CREATE TABLE session_timing(
    session_id SERIAL,
    expiration TIME NOT NULL,
@@ -22,7 +16,6 @@ CREATE TABLE users(
    user_email VARCHAR(70)  NOT NULL,
    user_password VARCHAR(256)  NOT NULL,
    user_token VARCHAR(255) ,
-   role_id INTEGER NOT NULL,
    PRIMARY KEY(user_id),
    FOREIGN KEY(role_id) REFERENCES Roles(role_id)
 );
