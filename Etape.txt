@@ -1,0 +1,7 @@
+git branch bradytodo
+git checkout bradytodo
+git add ....
+git config --global user.email "tsikiniony.jr@gmail.com"
+git config --global user.name "Tsikiniony"
+git commit -m "Description des modifications"
+git push origin nom_de_ta_branche
